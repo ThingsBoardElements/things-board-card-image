@@ -22,7 +22,8 @@ Copyright © HatioLab Inc. All rights reserved.
 				@apply --things-search-fab;
 			}
 			paper-card {
-				@apply --things-label-card-container;
+				/* @apply --things-label-card-container; */
+				margin:10px 1% 10px 0;
 				overflow:hidden;
 				border:1px solid rgba(0,0,0,.4);
 				cursor: pointer;
@@ -36,13 +37,13 @@ Copyright © HatioLab Inc. All rights reserved.
 			paper-card::shadow iron-image img {
 				height:105px !important;
 			}
-			paper-card .card-info {
+			/* paper-card .card-info {
 				position:absolute;
 				width:100%;
 				margin-top:-19px;padding:0 7px 0 10px;
 				font-size:11px;
 				color:#fedc75;
-			}
+			} */
 			paper-card .selected-card-info {
 				padding:7px 7px 7px 7px;
 				font-size:13px;
@@ -65,13 +66,55 @@ Copyright © HatioLab Inc. All rights reserved.
 				font-size:17px !important;
 			}
 
-			@media only all and (min-width: 400px) { paper-card{width:  98% !important; }}
-			@media only all and (min-width: 500px) { paper-card{width:  47% !important; }}
-			@media only all and (min-width: 800px) { paper-card{width:  30% !important; }}
-			@media only all and (min-width: 900px) { paper-card{width:30.5% !important; }}
-			@media only all and (min-width:1250px) { paper-card{width:22.6% !important; }}
-			@media only all and (min-width:1800px) { paper-card{width:17.5% !important; }}
-			@media only all and (min-width:2150px) { paper-card{width:14.4% !important; }}
+			/*아래 타이틀 부분에 필요없는 내용 숨기기 */
+			#card-detail span {
+				display:none;
+				overflow-x:hidden;
+				font-size:12px;
+				color:var(--things-primary-text-color);
+				white-space:nowrap;
+			}
+			/*아래 타이틀 부분 이름만 표시 */
+			#card-detail span.name {
+				display:block;
+				padding:3px 0 0 5px;
+				font-size:13px;
+				font-weight:bold;
+				color:var(--things-focus-background-color);
+			}
+
+			/*그림에 겹쳐 표시되는 글자 삭제 .header .title-text에 표시되어 있던 부분*/
+			paper-card {
+        		--paper-card-header-text: {
+          			display:none;
+       			}
+      		}
+
+			/* 좌측의 주황색 글씨 숨기기*/
+			paper-card .card-info {
+				display: none;
+			}
+
+			/*이미지 옆으로 길게 바꾸기*/
+			paper-card{
+				--paper-card-header-image:{
+					width:100%;
+        			height:120px;
+				}
+			}
+
+			paper-card {
+        		padding:6px 4px;
+        		min-height:85px
+      		}
+
+			@media only all and (max-width: 400px) { paper-card{width:  100% !important; }}
+			@media only all and (min-width: 401px) and (min-width: 500px) { paper-card{width:  49.2% !important; }}
+			@media only all and (min-width: 501px) and (min-width: 800px) { paper-card{width:  30% !important; }}
+			@media only all and (min-width: 801px) and (max-width: 1024px) { paper-card{width:32.5% !important; }}
+			@media only all and (min-width: 1025px) and (max-width:1250px) { paper-card{width:22.6% !important; }}
+			@media only all and (min-width: 1251px) and (max-width:1800px) { paper-card{width:24.5% !important; }}
+			@media only all and (min-width: 1801px){ paper-card{width:19.6% !important; }}
 		</style>
 
 		<paper-card
