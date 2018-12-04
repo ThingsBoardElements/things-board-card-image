@@ -1,14 +1,14 @@
-# things-card-image
+# things-board-card-image
 ## It is a card-like component that represents image information in images and descriptions in a manner similar to business cards.
 
 ```html
-<things-card-image-list
+<things-board-card-image-list
   items="[[items]]"
   use-file-service-url
   image-field="path"
   detail-fields="name,description,mimetype,tag"
   is-selector>
-</things-card-image-list>
+</things-board-card-image-list>
 ```
 
 

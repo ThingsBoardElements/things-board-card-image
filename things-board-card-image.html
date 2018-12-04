@@ -11,11 +11,11 @@ Copyright © HatioLab Inc. All rights reserved.
 <link rel="import" href="../things-global-behavior/things-global-behavior.html">
 
 <!--
-## things-card-image
+## things-board-card-image
 ### Image Card
 -->
 
-<dom-module id="things-card-image">
+<dom-module id="things-board-card-image">
 	<template>
 		<style>
 			paper-fab {
@@ -117,7 +117,7 @@ Copyright © HatioLab Inc. All rights reserved.
 
 	<script>
 		Polymer({
-			is: 'things-card-image',
+			is: 'things-board-card-image',
 
 			behaviors: [
 				Things.GlobalBehavior
@@ -210,7 +210,7 @@ Copyright © HatioLab Inc. All rights reserved.
 				},
 
 				/**
-				 * things-card-image를 통해 전달받는 property로 detail 정보에 출력할 필드 목록을 array 형태로 받습니다.
+				 * things-board-card-image를 통해 전달받는 property로 detail 정보에 출력할 필드 목록을 array 형태로 받습니다.
 				 ****
 				 */
 				fieldArray: {
@@ -219,7 +219,7 @@ Copyright © HatioLab Inc. All rights reserved.
 				},
 
 				/**
-				 * things-card-image를 통해 전달받는 property로 카드의 메타 정보를 포함한 object 입니다.
+				 * things-board-card-image를 통해 전달받는 property로 카드의 메타 정보를 포함한 object 입니다.
 				 *****/
 				detailObj: {
 					type: Object,
@@ -415,7 +415,7 @@ Copyright © HatioLab Inc. All rights reserved.
 			/**
 			 * image 클릭시 발생하는 event로 things-image-selector에서 해당 event를 listen 합니다.
 			 *****
-			 * @event things-card-image-selected
+			 * @event things-board-card-image-selected
 			 * @param {Object} detailObj
 			 */
 
@@ -427,7 +427,7 @@ Copyright © HatioLab Inc. All rights reserved.
 				if(this.detailToggle) {
 					this.detailToggle = false;
 				} else {
-					this.fire('things-card-image-selected', this.detailObj);
+					this.fire('things-board-card-image-selected', this.detailObj);
 				}
 			},
 			/**

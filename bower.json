@@ -1,16 +1,16 @@
 {
-  "name": "things-card-image",
+  "name": "things-board-card-image",
   "version": "v2.2.3",
   "authors": [
     "Hatio Lab. <heartyoh@hatiolab.com>"
   ],
-  "description": "An element providing things-card-image & things-card-image-list.",
+  "description": "An element providing things-board-card-image & things-board-card-image-list.",
   "keywords": [
     "web-component",
     "polymer",
     "seed"
   ],
-  "main": "things-card-image.html",
+  "main": "things-board-card-image.html",
   "license": "http://license.hatiolab.com/EULA",
   "homepage": "http://elements.hatiolab.com/",
   "ignore": [

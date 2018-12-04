@@ -6,24 +6,24 @@ Copyright © HatioLab Inc. All rights reserved.
 
 <link rel="import" href="../polymer-sortablejs/polymer-sortablejs.html">
 <link rel="import" href="../iron-scroll-target-behavior/iron-scroll-target-behavior.html">
-<link rel="import" href="things-card-image.html">
+<link rel="import" href="things-board-card-image.html">
 
 <!--
-## things-card-image-list
+## things-board-card-image-list
 ### Image Card List
 
 ```html
-<things-card-image-list
+<things-board-card-image-list
   items="[[items]]"
   use-file-service-url
   image-field="path"
   detail-fields="name,description,mimetype,tag"
   is-selector>
-</things-card-image-list>
+</things-board-card-image-list>
 ```
 -->
 
-<dom-module id="things-card-image-list">
+<dom-module id="things-board-card-image-list">
 	<template>
     <style>
       sortable-js {
@@ -35,7 +35,7 @@ Copyright © HatioLab Inc. All rights reserved.
     </style>
 		<sortable-js id="sortable-list" disabled="[[!sortable]]" group="[[_sortGroup]]">
       <template id="card-list" is="dom-repeat" items="[[items]]">
-  			<things-card-image
+  			<things-board-card-image
   				heading="[[item.description]]"
   				description="[[item.name]]"
   				use-file-service-url="[[useFileServiceUrl]]"
@@ -48,14 +48,14 @@ Copyright © HatioLab Inc. All rights reserved.
   				draggable="true"
   				button-icon="[[buttonIcon]]"
   				show-card-button="[[showCardButton]]">
-  			</things-card-image>
+  			</things-board-card-image>
   		</template>
     </sortable-js>
 	</template>
 
 	<script>
 		Polymer({
-			is: 'things-card-image-list',
+			is: 'things-board-card-image-list',
 
 			properties: {
 				/**
@@ -131,11 +131,11 @@ Copyright © HatioLab Inc. All rights reserved.
 			 * Fired when a images/vedeos sorted
 			 * param is sortable-list.update event
 			 *
-			 * @event things-card-image-list-sorted
+			 * @event things-board-card-image-list-sorted
 			 * @param {Object} event
 			 */
       _onSortableUpdated: function(e) {
-				this.fire('things-card-image-list-sorted', e)
+				this.fire('things-board-card-image-list-sorted', e)
       }
 		});
 	</script>

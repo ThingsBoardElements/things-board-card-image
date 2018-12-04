@@ -1,14 +1,14 @@
-# things-card-image
+# things-board-card-image
 ## 이는 명함과 비슷한 방법으로, 이미지 및 설명으로 이미지 정보를 표현하는 카드 형태의 컴포넌트이다.
 
 ```html
-<things-card-image-list
+<things-board-card-image-list
   items="[[items]]"
   use-file-service-url
   image-field="path"
   detail-fields="name,description,mimetype,tag"
   is-selector>
-</things-card-image-list>
+</things-board-card-image-list>
 ```
 
 
