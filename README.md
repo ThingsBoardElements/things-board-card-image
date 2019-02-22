@@ -1,19 +1,20 @@
-# things-board-card-image
+# things-card-image
+
 ## It is a card-like component that represents image information in images and descriptions in a manner similar to business cards.
 
 ```html
-<things-board-card-image-list
+<things-card-image-list
   items="[[items]]"
   use-file-service-url
   image-field="path"
   detail-fields="name,description,mimetype,tag"
-  is-selector>
-</things-board-card-image-list>
+  is-selector
+>
+</things-card-image-list>
 ```
 
-
-
 ## 2. Development
+
 ### 2.1 Install Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
@@ -44,6 +45,7 @@ $ polymer test
 
 The test has been set up as described in [web-component-tester](https://github.com/Polymer/web-component-tester).
 You can run the test with the following command.
+
 ```
 $ polymer test
 ```

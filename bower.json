@@ -1,22 +1,13 @@
 {
-  "name": "things-board-card-image",
-  "version": "v2.2.3",
-  "authors": [
-    "Hatio Lab. <heartyoh@hatiolab.com>"
-  ],
-  "description": "An element providing things-board-card-image & things-board-card-image-list.",
-  "keywords": [
-    "web-component",
-    "polymer",
-    "seed"
-  ],
-  "main": "things-board-card-image.html",
+  "name": "things-card-image",
+  "version": "v2.2.4",
+  "authors": ["Hatio Lab. <heartyoh@hatiolab.com>"],
+  "description": "An element providing things-card-image & things-card-image-list.",
+  "keywords": ["web-component", "polymer", "seed"],
+  "main": "things-card-image.html",
   "license": "http://license.hatiolab.com/EULA",
   "homepage": "http://elements.hatiolab.com/",
-  "ignore": [
-    "/.*",
-    "/test/"
-  ],
+  "ignore": ["/.*", "/test/"],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.0",
     "paper-card": "PolymerElements/paper-card#^1.1.1",
